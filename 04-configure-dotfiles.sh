@@ -12,3 +12,6 @@ sudo rm /etc/nginx/sites-available/default;
 sudo ln -s $HOME/dotfiles/dotfiles/nginx-default /etc/nginx/sites-available/default;
 sudo service nginx restart;
 sudo service apache2 restart;
+
+# APACHE2 settings
+
