@@ -2,13 +2,6 @@
 
 sudo apt-get update;
 
-sudo apt-get install libcurl4-gnutls-dev -y;
-sudo apt-get install libexpat1-dev -y;
-sudo apt-get install gettext -y;
-sudo apt-get install libz-dev -y;
-sudo apt-get install libssl-dev -y;
-
-sudo apt-get install git -y;
 sudo apt-get install mercurial -y;
 
 sudo apt-get install nginx -y;
