@@ -8,7 +8,7 @@ sudo service apparmor restart;
 sudo service mysql restart;
 
 # NGINX change port 80 -> 8085
-sudo rm /etc/nginx/sites-avaliable/default;
-sudo ln -s $HOME/dotfiles/dotfiles/nginx-default /etc/nginx/sites-avaliable/default;
+sudo rm /etc/nginx/sites-available/default;
+sudo ln -s $HOME/dotfiles/dotfiles/nginx-default /etc/nginx/sites-available/default;
 sudo service nginx restart;
 sudo service apache2 restart;
