@@ -17,7 +17,7 @@ sudo service nginx restart;
 sudo service apache2 restart;
 
 # APACHE2 settings
-sudo rm /etc/apache2/sites-available/000-default.conf;
-sudo ln -s $MY_DOTFILES_DIR/dotfiles/apache2.conf /etc/apache2/sites-available/000-default.conf;
+sudo rm /etc/apache2/apache2.conf;
+sudo ln -s $MY_DOTFILES_DIR/dotfiles/apache2.conf /etc/apache2/apache2.conf;
 sudo a2enmod rewrite;
 sudo service apache2 restart;
