@@ -22,21 +22,6 @@ $xDebugConf = str_replace('{{--XDEBUG_PROFILER_OUTPUT_DIR--}}', $xDebugProfilerD
 file_put_contents($xDebugConfPath, $xDebugConf);
 
 
-// php5.6 apache2 configs
-$phpIniPath = __DIR__ . '/dotfiles/php/5.6/php-apache.ini';
-$phpConf = file_get_contents($xDebugConfPath);
-$phpLogFilePath = $config['MY_DOTFILES_DIR'] . '/logs/php/5.6-apache2.log';
-$phpConf = str_replace('{{--PHP_ERROR_LOG_FILE_PATH--}}', $phpLogFilePath, $phpConf);
-// php5.6 cli configs
-$phpIniPath = __DIR__ . '/dotfiles/php/5.6/php-cli.ini';
-$phpConf = file_get_contents($xDebugConfPath);
-$phpLogFilePath = $config['MY_DOTFILES_DIR'] . '/logs/php/5.6-cli.log';
-$phpConf = str_replace('{{--PHP_ERROR_LOG_FILE_PATH--}}', $phpLogFilePath, $phpConf);
-// php5.6 fpm configs
-$phpIniPath = __DIR__ . '/dotfiles/php/5.6/php-fpm.ini';
-$phpConf = file_get_contents($xDebugConfPath);
-$phpLogFilePath = $config['MY_DOTFILES_DIR'] . '/logs/php/5.6-fpm.log';
-$phpConf = str_replace('{{--PHP_ERROR_LOG_FILE_PATH--}}', $phpLogFilePath, $phpConf);
 // php7.0 apache2 configs
 $phpIniPath = __DIR__ . '/dotfiles/php/7.0/php-apache.ini';
 $phpConf = file_get_contents($xDebugConfPath);

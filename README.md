@@ -21,4 +21,3 @@ sudo ./03-configure-vars.php
 sudo ./04-configure-dotfiles.sh
 
 sudo ./05-configure-ubntu.sh
-

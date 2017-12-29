@@ -23,15 +23,6 @@ sudo a2enmod rewrite;
 sudo service apache2 restart;
 
 # PHP settings
-sudo rm /etc/php/5.6/apache2/php.ini;
-sudo rm /etc/php/5.6/cli/php.ini;
-sudo rm /etc/php/5.6/fpm/php.ini;
-sudo rm /etc/php/5.6/mods-available/xdebug.ini;
-sudo ln -s $MY_DOTFILES_DIR/dotfiles/php/5.6/php-apache.ini /etc/php/5.6/apache2/php.ini;
-sudo ln -s $MY_DOTFILES_DIR/dotfiles/php/5.6/php-cli.ini /etc/php/5.6/cli/php.ini;
-sudo ln -s $MY_DOTFILES_DIR/dotfiles/php/5.6/php-fpm.ini /etc/php/5.6/fpm/php.ini;
-sudo ln -s $MY_DOTFILES_DIR/dotfiles/php/xdebug.ini /etc/php/5.6/mods-available/xdebug.ini;
-# ---------------------------------------------------
 sudo rm /etc/php/7.0/apache2/php.ini;
 sudo rm /etc/php/7.0/cli/php.ini;
 sudo rm /etc/php/7.0/fpm/php.ini;
@@ -60,9 +51,6 @@ sudo ln -s $MY_DOTFILES_DIR/dotfiles/php/7.2/php-fpm.ini /etc/php/7.2/fpm/php.in
 sudo chmod 0777 $MY_DOTFILES_DIR/logs/php/xdebug.log;
 sudo chmod 0777 $MY_DOTFILES_DIR/logs/php/xdebug-profiler;
 # ---------------------------------------------------
-sudo chmod 0777 $MY_DOTFILES_DIR/logs/php/5.6-apache2.log;
-sudo chmod 0777 $MY_DOTFILES_DIR/logs/php/5.6-cli.log;
-sudo chmod 0777 $MY_DOTFILES_DIR/logs/php/5.6-fpm.log;
 sudo chmod 0777 $MY_DOTFILES_DIR/logs/php/7.0-apache2.log;
 sudo chmod 0777 $MY_DOTFILES_DIR/logs/php/7.0-cli.log;
 sudo chmod 0777 $MY_DOTFILES_DIR/logs/php/7.0-fpm.log;
@@ -75,7 +63,6 @@ sudo chmod 0777 $MY_DOTFILES_DIR/logs/php/7.2-fpm.log;
 # ---------------------------------------------------
 sudo service apache2 restart;
 sudo service nginx restart;
-sudo service php5.6-fpm restart;
 sudo service php7.0-fpm restart;
 sudo service php7.1-fpm restart;
 sudo service php7.2-fpm restart;

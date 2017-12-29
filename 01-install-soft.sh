@@ -13,42 +13,6 @@ sudo apt-get install apache2 -y;
 sudo add-apt-repository ppa:ondrej/php;
 sudo apt-get update;
 
-sudo apt-get install php5.6 -y;
-sudo apt-get install php5.6-fpm -y;
-sudo apt-get install php5.6-zip -y;
-sudo apt-get install php5.6-xmlrpc -y;
-sudo apt-get install php5.6-xsl -y;
-sudo apt-get install php5.6-mbstring -y;
-sudo apt-get install php5.6-mcrypt -y;
-sudo apt-get install php5.6-mysql -y;
-sudo apt-get install php5.6-odbc -y;
-sudo apt-get install php5.6-pgsql -y;
-sudo apt-get install php5.6-pspell -y;
-sudo apt-get install php5.6-readline -y;
-sudo apt-get install php5.6-recode -y;
-sudo apt-get install php5.6-snmp -y;
-sudo apt-get install php5.6-soap -y;
-sudo apt-get install php5.6-sqlite3 -y;
-sudo apt-get install php5.6-sybase -y;
-sudo apt-get install php5.6-tidy -y;
-sudo apt-get install php5.6-xml -y;
-sudo apt-get install php5.6-json -y;
-sudo apt-get install php5.6-ldap -y;
-sudo apt-get install php5.6-intl -y;
-sudo apt-get install php5.6-interbase -y;
-sudo apt-get install php5.6-imap -y;
-sudo apt-get install php5.6-gmp -y;
-sudo apt-get install php5.6-gd -y;
-sudo apt-get install php5.6-enchant -y;
-sudo apt-get install php5.6-dba -y;
-sudo apt-get install php5.6-bz2 -y;
-sudo apt-get install php5.6-bcmath -y;
-sudo apt-get install php5.6-phpdbg -y;
-sudo apt-get install php5.6-cgi -y;
-sudo apt-get install php5.6-cli -y;
-sudo apt-get install php5.6-dev -y;
-sudo apt-get install php5.6-xdebug -y;
-
 sudo apt-get install php7.0 -y;
 sudo apt-get install php7.0-fpm -y;
 sudo apt-get install php7.0-zip -y;
@@ -157,8 +121,8 @@ sudo apt-get install php7.2-dev -y;
 
 sudo apt-get install libapache2-mod-php -y;
 
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash;
+#wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash;
 
-sudo add-apt-repository ppa:longsleep/golang-backports;
-sudo apt-get update;
-sudo apt-get install golang-go;
+#sudo add-apt-repository ppa:longsleep/golang-backports;
+#sudo apt-get update;
+#sudo apt-get install golang-go;
