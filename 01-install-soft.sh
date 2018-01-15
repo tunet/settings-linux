@@ -2,13 +2,13 @@
 
 sudo apt-get update;
 
-sudo apt-get install mercurial -y;
+#sudo apt-get install mercurial -y;
 
 sudo apt-get install nginx -y;
 
 sudo apt-get install mysql-server -y;
 
-sudo apt-get install apache2 -y;
+#sudo apt-get install apache2 -y;
 
 sudo add-apt-repository ppa:ondrej/php;
 sudo apt-get update;
@@ -119,7 +119,11 @@ sudo apt-get install php7.2-cgi -y;
 sudo apt-get install php7.2-cli -y;
 sudo apt-get install php7.2-dev -y;
 
-sudo apt-get install libapache2-mod-php -y;
+#sudo apt-get install libapache2-mod-php -y;
+
+sudo apt-get install memcached -y;
+sudo systemctl restart memcached;
+sudo apt-get install php7.2-memcached -y;
 
 #wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash;
 
