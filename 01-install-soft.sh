@@ -121,12 +121,28 @@ sudo apt-get install php7.2-dev -y;
 
 #sudo apt-get install libapache2-mod-php -y;
 
-sudo apt-get install memcached -y;
-sudo systemctl restart memcached;
-sudo apt-get install php7.2-memcached -y;
-
 #wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash;
 
 #sudo add-apt-repository ppa:longsleep/golang-backports;
 #sudo apt-get update;
 #sudo apt-get install golang-go;
+
+
+
+sudo apt-get install memcached -y;
+sudo systemctl restart memcached;
+sudo apt-get install php7.2-memcached -y;
+
+
+sudo cp $MY_DOTFILES_DIR/dotfiles/pgdg.list /etc/apt/sources.list.d/pgdg.list;
+
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | \
+  sudo apt-key add -
+
+sudo apt-get update;
+
+sudo apt-get install postgresql-9.6;
+sudo apt-get install postgresql-client-9.6;
+sudo apt-get install postgresql-contrib-9.6;
+sudo apt-get install libpq-dev;
+sudo apt-get install postgresql-server-dev-9.6;

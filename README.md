@@ -23,7 +23,7 @@ cd dotfiles
 #### Edit file config.cfg
 
 ````bash
-chmod 0777 01-install-soft.sh 03-configure-vars.php 04-configure-dotfiles.sh 05-configure-ubntu.sh 06-postresql-install.sh 07-configure-programs.sh
+chmod 0777 01-install-soft.sh 03-configure-vars.php 04-configure-dotfiles.sh 05-configure-ubuntu.sh 06-configure-programs.sh
 ````
 
 ````bash
@@ -39,15 +39,11 @@ sudo ./04-configure-dotfiles.sh
 ````
 
 ````bash
-sudo ./05-configure-ubntu.sh
+sudo ./05-configure-ubuntu.sh
 ````
 
 ````bash
-sudo ./06-postresql-install.sh
-````
-
-````bash
-./07-configure-programs.sh
+./06-configure-programs.sh
 ````
 
 ````bash
