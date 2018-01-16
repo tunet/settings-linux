@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source ./config.cfg
+
 sudo apt-get update;
 
 #sudo apt-get install mercurial -y;
