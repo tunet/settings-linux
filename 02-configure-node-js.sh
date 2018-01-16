@@ -1,6 +1,10 @@
 #!/bin/bash
 
-sudo apt-get update;
+#sudo apt-get update;
+
+source ~/.nvm/nvm.sh;
+source ~/.profile;
+source ~/.bashrc;
 
 nvm install 7.4.0;
 nvm alias default 7.4.0;
