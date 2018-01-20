@@ -21,49 +21,47 @@ $xDebugProfilerDirPath = $config['MY_DOTFILES_DIR'] . '/logs/php/xdebug-profiler
 $xDebugConf = str_replace('{{--XDEBUG_PROFILER_OUTPUT_DIR--}}', $xDebugProfilerDirPath, $xDebugConf);
 file_put_contents($xDebugConfPath, $xDebugConf);
 
-
-/*// php7.0 apache2 configs
-$phpIniPath = __DIR__ . '/dotfiles/php/7.0/php-apache.ini';
-$phpConf = file_get_contents($xDebugConfPath);
-$phpLogFilePath = $config['MY_DOTFILES_DIR'] . '/logs/php/7.0-apache2.log';
-$phpConf = str_replace('{{--PHP_ERROR_LOG_FILE_PATH--}}', $phpLogFilePath, $phpConf);*/
-//// php7.0 cli configs
-//$phpIniPath = __DIR__ . '/dotfiles/php/7.0/php-cli.ini';
-//$phpConf = file_get_contents($xDebugConfPath);
-//$phpLogFilePath = $config['MY_DOTFILES_DIR'] . '/logs/php/7.0-cli.log';
-//$phpConf = str_replace('{{--PHP_ERROR_LOG_FILE_PATH--}}', $phpLogFilePath, $phpConf);
-//// php7.0 fpm configs
-//$phpIniPath = __DIR__ . '/dotfiles/php/7.0/php-fpm.ini';
-//$phpConf = file_get_contents($xDebugConfPath);
-//$phpLogFilePath = $config['MY_DOTFILES_DIR'] . '/logs/php/7.0-fpm.log';
-//$phpConf = str_replace('{{--PHP_ERROR_LOG_FILE_PATH--}}', $phpLogFilePath, $phpConf);
 /*// php7.1 apache2 configs
 $phpIniPath = __DIR__ . '/dotfiles/php/7.1/php-apache.ini';
 $phpConf = file_get_contents($xDebugConfPath);
 $phpLogFilePath = $config['MY_DOTFILES_DIR'] . '/logs/php/7.1-apache2.log';
-$phpConf = str_replace('{{--PHP_ERROR_LOG_FILE_PATH--}}', $phpLogFilePath, $phpConf);*/
+$phpConf = str_replace('{{--PHP_ERROR_LOG_FILE_PATH--}}', $phpLogFilePath, $phpConf);
+file_put_contents($phpIniPath, $phpConf);*/
 // php7.1 cli configs
 $phpIniPath = __DIR__ . '/dotfiles/php/7.1/php-cli.ini';
 $phpConf = file_get_contents($xDebugConfPath);
 $phpLogFilePath = $config['MY_DOTFILES_DIR'] . '/logs/php/7.1-cli.log';
 $phpConf = str_replace('{{--PHP_ERROR_LOG_FILE_PATH--}}', $phpLogFilePath, $phpConf);
+file_put_contents($phpIniPath, $phpConf);
 // php7.1 fpm configs
 $phpIniPath = __DIR__ . '/dotfiles/php/7.1/php-fpm.ini';
 $phpConf = file_get_contents($xDebugConfPath);
 $phpLogFilePath = $config['MY_DOTFILES_DIR'] . '/logs/php/7.1-fpm.log';
 $phpConf = str_replace('{{--PHP_ERROR_LOG_FILE_PATH--}}', $phpLogFilePath, $phpConf);
+file_put_contents($phpIniPath, $phpConf);
+// php7.2 xdebug config
+$xdebugPhp72settings = file_get_contents(__DIR__ . '/dotfiles/php/7.2/xdebug/xdebug-php7.2.example');
 /*// php7.2 apache2 configs
 $phpIniPath = __DIR__ . '/dotfiles/php/7.2/php-apache.ini';
 $phpConf = file_get_contents($xDebugConfPath);
 $phpLogFilePath = $config['MY_DOTFILES_DIR'] . '/logs/php/7.2-apache2.log';
-$phpConf = str_replace('{{--PHP_ERROR_LOG_FILE_PATH--}}', $phpLogFilePath, $phpConf);*/
+$phpConf = str_replace('{{--PHP_ERROR_LOG_FILE_PATH--}}', $phpLogFilePath, $phpConf);
+file_put_contents($phpIniPath, $phpConf);*/
 // php7.2 cli configs
 $phpIniPath = __DIR__ . '/dotfiles/php/7.2/php-cli.ini';
 $phpConf = file_get_contents($xDebugConfPath);
+$phpConf .= $xdebugPhp72settings;
 $phpLogFilePath = $config['MY_DOTFILES_DIR'] . '/logs/php/7.2-cli.log';
 $phpConf = str_replace('{{--PHP_ERROR_LOG_FILE_PATH--}}', $phpLogFilePath, $phpConf);
+$phpConf = str_replace('{{--XDEBUG_REMOTE_LOG--}}', $xDebugLogFilePath, $phpConf);
+$phpConf = str_replace('{{--XDEBUG_PROFILER_OUTPUT_DIR--}}', $xDebugProfilerDirPath, $phpConf);
+file_put_contents($phpIniPath, $phpConf);
 // php7.2 fpm configs
 $phpIniPath = __DIR__ . '/dotfiles/php/7.2/php-fpm.ini';
 $phpConf = file_get_contents($xDebugConfPath);
+$phpConf .= $xdebugPhp72settings;
 $phpLogFilePath = $config['MY_DOTFILES_DIR'] . '/logs/php/7.2-fpm.log';
 $phpConf = str_replace('{{--PHP_ERROR_LOG_FILE_PATH--}}', $phpLogFilePath, $phpConf);
+$phpConf = str_replace('{{--XDEBUG_REMOTE_LOG--}}', $xDebugLogFilePath, $phpConf);
+$phpConf = str_replace('{{--XDEBUG_PROFILER_OUTPUT_DIR--}}', $xDebugProfilerDirPath, $phpConf);
+file_put_contents($phpIniPath, $phpConf);

@@ -23,7 +23,7 @@ cd dotfiles
 #### Edit file config.cfg
 
 ````bash
-chmod 0777 01-install-soft.sh 02-configure-node-js.sh 03-configure-vars.php 04-configure-dotfiles.sh 05-configure-ubuntu.sh 06-install-programs.sh
+chmod 0777 01-install-soft.sh 02-configure-node-js.sh 03-configure-vars.php 04-configure-dotfiles.sh 05-configure-ubuntu.sh 06-install-programs.sh 07-install-xdebug-php72.sh
 ````
 
 ````bash
@@ -48,6 +48,10 @@ sudo ./05-configure-ubuntu.sh
 
 ````bash
 sudo ./06-install-programs.sh
+````
+
+````bash
+sudo ./07-install-xdebug-php72.sh
 ````
 
 ````bash
