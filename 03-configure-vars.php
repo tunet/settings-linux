@@ -49,7 +49,7 @@ $phpConf = str_replace('{{--PHP_ERROR_LOG_FILE_PATH--}}', $phpLogFilePath, $phpC
 file_put_contents($phpIniPath, $phpConf);*/
 // php7.2 cli configs
 $phpIniPath = __DIR__ . '/dotfiles/php/7.2/php-cli.ini';
-$phpConf = file_get_contents($xDebugConfPath);
+$phpConf = file_get_contents($phpIniPath);
 $phpConf .= $xdebugPhp72settings;
 $phpLogFilePath = $config['MY_DOTFILES_DIR'] . '/logs/php/7.2-cli.log';
 $phpConf = str_replace('{{--PHP_ERROR_LOG_FILE_PATH--}}', $phpLogFilePath, $phpConf);
@@ -58,7 +58,7 @@ $phpConf = str_replace('{{--XDEBUG_PROFILER_OUTPUT_DIR--}}', $xDebugProfilerDirP
 file_put_contents($phpIniPath, $phpConf);
 // php7.2 fpm configs
 $phpIniPath = __DIR__ . '/dotfiles/php/7.2/php-fpm.ini';
-$phpConf = file_get_contents($xDebugConfPath);
+$phpConf = file_get_contents($phpIniPath);
 $phpConf .= $xdebugPhp72settings;
 $phpLogFilePath = $config['MY_DOTFILES_DIR'] . '/logs/php/7.2-fpm.log';
 $phpConf = str_replace('{{--PHP_ERROR_LOG_FILE_PATH--}}', $phpLogFilePath, $phpConf);
