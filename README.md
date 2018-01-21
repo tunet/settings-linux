@@ -1,15 +1,15 @@
 # INSTALL
 
 ````bash
-sudo apt-get update
+apt-get update
 ````
 
 ````bash
-sudo apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev
+apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev
 ````
 
 ````bash
-sudo apt-get install git
+apt-get install git
 ````
 
 ````bash
@@ -31,27 +31,27 @@ chmod 0777 01-install-soft.sh 02-configure-node-js.sh 03-configure-vars.php 04-c
 ````
 
 ````bash
-sudo ./01-install-soft.sh
+./01-install-soft.sh
 ````
 
 ````bash
-sudo ./02-configure-node-js.sh
+./02-configure-node-js.sh
 ````
 
 ````bash
-sudo ./03-configure-vars.php
+./03-configure-vars.php
 ````
 
 ````bash
-sudo ./04-configure-dotfiles.sh
+./04-configure-dotfiles.sh
 ````
 
 ````bash
-sudo ./05-install-programs.sh
+./05-install-programs.sh
 ````
 
 ````bash
-sudo -u postgres psql
+-u postgres psql
 create user tunet with password '123';
 create database test_tunet;
 grant all privileges on database test_tunet to tunet;
