@@ -16,40 +16,13 @@ sudo ln -s $MY_DOTFILES_DIR/dotfiles/nginx-default /etc/nginx/sites-available/de
 sudo service nginx restart;
 sudo service apache2 restart;
 
-# APACHE2 settings
-#sudo rm /etc/apache2/apache2.conf;
-#sudo ln -s $MY_DOTFILES_DIR/dotfiles/apache2.conf /etc/apache2/apache2.conf;
-#sudo a2enmod rewrite;
-#sudo service apache2 restart;
-
 # ---------------------------------------------------
-#sudo rm /etc/php/7.1/apache2/php.ini;
-sudo rm /etc/php/7.1/cli/php.ini;
-sudo rm /etc/php/7.1/fpm/php.ini;
-sudo rm /etc/php/7.1/mods-available/xdebug.ini;
-#sudo ln -s $MY_DOTFILES_DIR/dotfiles/php/7.1/php-apache.ini /etc/php/7.1/apache2/php.ini;
-sudo ln -s $MY_DOTFILES_DIR/dotfiles/php/7.1/php-cli.ini /etc/php/7.1/cli/php.ini;
-sudo ln -s $MY_DOTFILES_DIR/dotfiles/php/7.1/php-fpm.ini /etc/php/7.1/fpm/php.ini;
-sudo ln -s $MY_DOTFILES_DIR/dotfiles/php/xdebug.ini /etc/php/7.1/mods-available/xdebug.ini;
-# ---------------------------------------------------
-#sudo rm /etc/php/7.2/apache2/php.ini;
 sudo rm /etc/php/7.2/cli/php.ini;
 sudo rm /etc/php/7.2/fpm/php.ini;
-#sudo ln -s $MY_DOTFILES_DIR/dotfiles/php/7.2/php-apache.ini /etc/php/7.2/apache2/php.ini;
 sudo ln -s $MY_DOTFILES_DIR/dotfiles/php/7.2/php-cli.ini /etc/php/7.2/cli/php.ini;
 sudo ln -s $MY_DOTFILES_DIR/dotfiles/php/7.2/php-fpm.ini /etc/php/7.2/fpm/php.ini;
-# ---------------------------------------------------
-sudo chmod 0777 $MY_DOTFILES_DIR/logs/php/xdebug.log;
-sudo chmod 0777 $MY_DOTFILES_DIR/logs/php/xdebug-profiler;
-# ---------------------------------------------------
-#sudo chmod 0777 $MY_DOTFILES_DIR/logs/php/7.1-apache2.log;
-sudo chmod 0777 $MY_DOTFILES_DIR/logs/php/7.1-cli.log;
-sudo chmod 0777 $MY_DOTFILES_DIR/logs/php/7.1-fpm.log;
-#sudo chmod 0777 $MY_DOTFILES_DIR/logs/php/7.2-apache2.log;
 sudo chmod 0777 $MY_DOTFILES_DIR/logs/php/7.2-cli.log;
 sudo chmod 0777 $MY_DOTFILES_DIR/logs/php/7.2-fpm.log;
 # ---------------------------------------------------
-#sudo service apache2 restart;
 sudo service nginx restart;
-sudo service php7.1-fpm restart;
 sudo service php7.2-fpm restart;
