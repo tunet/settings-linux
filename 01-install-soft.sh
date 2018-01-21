@@ -8,6 +8,8 @@ apt-get install nginx -y;
 
 apt-get install mysql-server -y;
 
+apt-get install software-properties-common;
+
 add-apt-repository ppa:ondrej/php;
 apt-get update;
 

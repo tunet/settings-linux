@@ -17,11 +17,11 @@ git clone https://github.com/tunet/settings-linux.git ./dotfiles
 ````
 
 ````bash
-git checkout production
+cd dotfiles
 ````
 
 ````bash
-cd dotfiles
+git checkout production
 ````
 
 #### Edit file config.cfg
