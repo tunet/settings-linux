@@ -4,6 +4,8 @@ source ./config.cfg
 
 apt-get update;
 
+apt-get install openjdk-8-jdk -y;
+
 apt-get install nginx -y;
 
 apt-get install mysql-server -y;
