@@ -2,8 +2,6 @@
 
 source ./config.cfg
 
-mkdir $HOME/bin;
-
 # COMPOSER
 ln -s $MY_DOTFILES_DIR/programs/composer.phar /usr/bin/composer;
 chmod 0777 $HOME/bin/composer;
