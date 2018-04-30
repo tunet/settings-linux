@@ -17,7 +17,11 @@ git clone https://github.com/tunet/settings-linux.git ./dotfiles
 ````
 
 ````bash
-cd dotfiles
+cd settings-linux
+````
+
+````bash
+git checkout docker-pack
 ````
 
 ````bash

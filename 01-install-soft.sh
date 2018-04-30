@@ -21,7 +21,6 @@ sudo apt-get update;
 sudo apt-get install dbeaver-ce -y;
 
 # DOCKER
-sudo apt-get update;
 sudo apt-get install apt-transport-https ca-certificates curl software-properties-common -y;
 sudo sh -c 'echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu artful stable" >> /etc/apt/sources.list.d/docker.list';
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
