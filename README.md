@@ -13,7 +13,7 @@ sudo apt-get install git
 ````
 
 ````bash
-git clone https://github.com/tunet/settings-linux.git ./dotfiles
+git clone https://github.com/tunet/settings-linux.git
 ````
 
 ````bash
