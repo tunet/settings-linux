@@ -58,6 +58,6 @@ grant all privileges on database test_tunet to tunet;
 cd ~
 wget https://download.jetbrains.com/teamcity/TeamCity-2018.1.2.tar.gz
 tar -xzf TeamCity-2018.1.2.tar.gz
-cd JetBrains/TeamCity/bin
+cd TeamCity/bin
 runAll.sh start
 ````
