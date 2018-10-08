@@ -27,7 +27,7 @@ git checkout production
 #### Edit file config.cfg
 
 ````bash
-chmod 0777 01-install-soft.sh 02-configure-node-js.sh 03-configure-vars.php 04-configure-dotfiles.sh 05-install-programs.sh
+chmod 0777 01-install-soft.sh 02-configure-vars.php 03-configure-dotfiles.sh 04-install-programs.sh
 ````
 
 ````bash
@@ -35,19 +35,15 @@ chmod 0777 01-install-soft.sh 02-configure-node-js.sh 03-configure-vars.php 04-c
 ````
 
 ````bash
-./02-configure-node-js.sh
+./02-configure-vars.php
 ````
 
 ````bash
-./03-configure-vars.php
+./03-configure-dotfiles.sh
 ````
 
 ````bash
-./04-configure-dotfiles.sh
-````
-
-````bash
-./05-install-programs.sh
+./04-install-programs.sh
 ````
 
 ````bash
@@ -60,16 +56,8 @@ grant all privileges on database test_tunet to tunet;
 
 ````bash
 cd ~
-wget https://download.jetbrains.com/teamcity/TeamCity-2017.2.1.tar.gz
-tar -xzf TeamCity-10.0.4.tar.gz
-mkdir /opt/JetBrains
-mv TeamCity /opt/JetBrains/TeamCity
-/opt/JetBrains/TeamCity/bin
+wget https://download.jetbrains.com/teamcity/TeamCity-2018.1.2.tar.gz
+tar -xzf TeamCity-2018.1.2.tar.gz
+cd JetBrains/TeamCity/bin
 runAll.sh start
-````
-
-````bash
-cd ~/dotfiles/programs
-tar -xzf mysql-connector-java-5.1.45.tar.gz
-mv ./mysql-connector-java-5.1.45/* ../todo/
 ````

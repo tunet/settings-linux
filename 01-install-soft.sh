@@ -8,8 +8,6 @@ apt-get install openjdk-8-jdk -y;
 
 apt-get install nginx -y;
 
-apt-get install mysql-server -y;
-
 apt-get install software-properties-common;
 
 add-apt-repository ppa:ondrej/php;
@@ -20,10 +18,8 @@ apt-get install php7.2-fpm -y;
 apt-get install php7.2-zip -y;
 apt-get install php7.2-xsl -y;
 apt-get install php7.2-mbstring -y;
-apt-get install php7.2-mysql -y;
 apt-get install php7.2-pgsql -y;
 apt-get install php7.2-readline -y;
-apt-get install php7.2-soap -y;
 apt-get install php7.2-xml -y;
 apt-get install php7.2-json -y;
 apt-get install php7.2-intl -y;
@@ -31,8 +27,6 @@ apt-get install php7.2-imap -y;
 apt-get install php7.2-gd -y;
 apt-get install php7.2-bz2 -y;
 apt-get install php7.2-cli -y;
-
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 
 apt-get install memcached -y;
 systemctl restart memcached;
