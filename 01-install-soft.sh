@@ -33,15 +33,15 @@ systemctl restart memcached;
 apt-get install php7.2-memcached -y;
 
 
-cp $MY_DOTFILES_DIR/dotfiles/pgdg.list /etc/apt/sources.list.d/pgdg.list;
+echo 'deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main' >> /etc/apt/sources.list.d/pgdg.list;
 
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | \
   apt-key add -
 
 apt-get update;
 
-apt-get install postgresql-9.6 -y;
-apt-get install postgresql-client-9.6 -y;
-apt-get install postgresql-contrib-9.6 -y;
 apt-get install libpq-dev -y;
-apt-get install postgresql-server-dev-9.6 -y;
+apt-get install postgresql-10 -y;
+apt-get install postgresql-client-10 -y;
+apt-get install postgresql-contrib-10 -y;
+apt-get install postgresql-server-dev-10 -y;
