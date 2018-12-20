@@ -4,6 +4,9 @@ source ./config.cfg
 
 apt-get update;
 
+apt-get install curl -y;
+apt-get install ca-certificates -y;
+
 apt-get install openjdk-8-jdk -y;
 
 apt-get install nginx -y;
@@ -33,15 +36,12 @@ systemctl restart memcached;
 apt-get install php7.2-memcached -y;
 
 
-echo 'deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main' >> /etc/apt/sources.list.d/pgdg.list;
+echo 'deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main' >> /etc/apt/sources.list.d/pgdg.list;
 
-wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | \
-  apt-key add -
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
 
 apt-get update;
 
 apt-get install libpq-dev -y;
 apt-get install postgresql-10 -y;
-apt-get install postgresql-client-10 -y;
-apt-get install postgresql-contrib-10 -y;
 apt-get install postgresql-server-dev-10 -y;
