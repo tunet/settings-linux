@@ -43,7 +43,7 @@ cd traefik
 ````
 
 ````bash
-docker network add proxy
+docker network create proxy
 ````
 
 ````bash
