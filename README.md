@@ -25,9 +25,27 @@ git checkout docker-pack
 ````
 
 ````bash
-chmod 0777 install-docker.sh
+chmod 0777 install-docker.sh install-traefik.sh
 ````
+
+Configure: config.cfg
 
 ````bash
 ./install-docker.sh
+````
+
+````bash
+./install-traefik.sh
+````
+
+````bash
+cd traefik
+````
+
+````bash
+docker network add proxy
+````
+
+````bash
+docker-compose up -d --build
 ````
